@@ -22,7 +22,7 @@
         }
         .navbar.fixed {
         background-color: white;
-        color: black;
+        color: black; important!
         }
         </style>
     </head>
@@ -46,13 +46,15 @@
         </nav>
         <script>
         window.onscroll = function() {
-            var navbar = document.getElementById("mainNav");
-            if (window.pageYOffset >= 100) {
-                navbar.classList.add("fixed");
-            } else {
-                navbar.classList.remove("fixed");
-                }
-            };
+    var navbar = document.getElementById("mainNav");
+    if (window.pageYOffset >= 100) {
+        navbar.style.backgroundColor = "white";
+        navbar.style.color = "black";
+    } else {
+        navbar.style.backgroundColor = "";
+        navbar.style.color = "white";
+    }
+};
         </script>
         <!-- Masthead-->
         <header class="masthead text-white text-center" style="background-image: url('assets/img/bg4.jpg'); background-size: cover;">
