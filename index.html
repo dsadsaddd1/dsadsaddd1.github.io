@@ -15,6 +15,14 @@
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <style>
+        .navbar {
+        transition: background-color 0.3s ease;
+        }
+        .navbar.fixed {
+        background-color: black;
+        }
+        </style>
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -34,6 +42,16 @@
                 </div>
             </div>
         </nav>
+        <script>
+        window.onscroll = function() {
+            var navbar = document.getElementById("mainNav");
+            if (window.pageYOffset >= 100) {
+                navbar.classList.add("fixed");
+            } else {
+                navbar.classList.remove("fixed");
+                }
+            };
+        </script>
         <!-- Masthead-->
         <header class="masthead text-white text-center" style="background-image: url('assets/img/bg4.jpg'); background-size: cover;">
             <div class="container d-flex align-items-center flex-column">
